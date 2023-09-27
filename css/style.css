@@ -991,6 +991,7 @@ label.user-contact-checkbox {
   .features-list {
     display: flex;
     gap: 24px;
+    margin-left: 70px;
     flex-direction: column;
   }
   .services-list {
@@ -1002,6 +1003,7 @@ label.user-contact-checkbox {
   .team-list {
     display: inline-flex;
     gap: 24px;
+    margin-left: 50px;
     flex-direction: column;
   }
   .team-list-item {
@@ -1011,6 +1013,10 @@ label.user-contact-checkbox {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
       0px 1px 1px 0px rgba(46, 47, 66, 0.16),
       0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    flex-direction: column;
+  }
+  .footer-list {
+    display: flex;
     flex-direction: column;
   }
 }
