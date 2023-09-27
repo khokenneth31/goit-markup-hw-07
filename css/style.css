@@ -161,7 +161,7 @@ nav {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../img/hero.jpg);
+    url(../img/dhero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover, cover;
@@ -965,7 +965,17 @@ label.user-contact-checkbox {
     text-transform: capitalize;
   }
   .section-hero {
-    background-size: center;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../img/mhero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover, cover;
+    text-align: center;
+    padding: 188px 0;
+    background-color: var(--navyblue);
   }
   .feature-list-title {
     font-size: 36px;
