@@ -54,7 +54,7 @@ address {
     max-width: 786px;
   }
   @media screen and (min-width: 1158px) {
-    width: 1158px;
+    max-width: 1158px;
     margin: auto;
   }
 }
@@ -130,7 +130,16 @@ nav {
 }
 
 .section-services {
-  padding-top: 0;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1158px) {
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: 1.12px;
+  }
 }
 
 .section-title-heading {
@@ -227,17 +236,19 @@ nav {
   text-align: center;
   justify-content: center;
 
-  @media screen and (min-width: 786px) {
+  @media screen and (width: 786px) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    text-align: left;
     justify-content: center;
     column-gap: 24px;
     row-gap: 72px;
   }
-  @media screen and (max-width: 1158px) {
-    display: block;
+  @media screen and (width: 1158px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     text-align: left;
     gap: 24px;
   }
@@ -245,10 +256,10 @@ nav {
 .features-icon {
   display: none;
 
-  @media screen and (min-width: 786px) {
+  @media screen and (max-width: 786px) {
     display: none;
   }
-  @media screen and (max-width: 1158px) {
+  @media screen and (min-width: 1158px) {
     display: block;
     height: 64px;
     align-items: center;
@@ -303,7 +314,16 @@ nav {
     letter-spacing: 0.32px;
   }
 }
+.features {
+  visibility: hidden;
+  @media screen and (min-width: 768px) {
+    visibility: hidden;
+  }
 
+  @media screen and (min-width: 1158px) {
+    visibility: visible;
+  }
+}
 .section-title {
   @media screen and (min-width: 768px) {
     color: var(--navyblue);
