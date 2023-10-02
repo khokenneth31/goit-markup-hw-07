@@ -50,10 +50,11 @@ address {
   max-width: 428px;
   margin: auto;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     max-width: 768px;
+    margin: auto;
   }
-  @media screen and (min-width: 1158px) {
+  @media screen and (max-width: 1158px) {
     max-width: 1158px;
     margin: auto;
   }
@@ -138,9 +139,50 @@ nav {
     padding: 20px 0;
   }
 }
+/*mobile*/
+.mobile-nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+.mobile-nav-button svg {
+  fill: var(--navyblue);
+}
 
+.mobile-nav {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+.mobile-nav-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-nav-close svg {
+  fill: var(--navyblue);
+}
+/*mobile*/
 .section {
-  padding: 120px 0;
+  padding: 100px 0;
 }
 
 .section-services {
@@ -265,7 +307,7 @@ nav {
     row-gap: 72px;
   }
   @media screen and (width: 1158px) {
-    display: flex;
+    display: block;
     flex-direction: row;
     flex-wrap: nowrap;
     text-align: left;
@@ -616,42 +658,47 @@ nav {
   background: var(--navyblue);
 }
 .footer-list-item {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: 0 72px;
   margin-bottom: 72px;
 
   @media screen and (min-width: 768px) {
-    display: inline-flex;
-    justify-content: left;
-    align-items: left;
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: 1158px) {
-    display: block;
-    width: 264px;
-    box-sizing: content-box;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    row-gap: 0;
+    margin: 0;
   }
 }
 
 .footer-list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 72px;
+  column-gap: 0;
+
   @media screen and (min-width: 768px) {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
   }
 
   @media screen and (min-width: 1158px) {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 96px;
+    row-gap: 0;
   }
 }
 
@@ -669,7 +716,6 @@ nav {
   line-height: 24px;
   letter-spacing: 0.32px;
   color: var(--cloud);
-  margin: 0 72px;
   text-align: left;
 
   @media screen and (min-width: 768px) {
@@ -859,16 +905,14 @@ nav {
 .nav-list-item-link:active {
   color: var(--ocean);
 }
-.footer-container {
-  display: flex;
-  flex-direction: row;
-}
+
 .email-form-group-input {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   cursor: auto;
   font-size: 16px;
-  width: 100%;
+  width: 250px;
   height: 40px;
   border-radius: 4px;
   border: 1px solid var(--white);
@@ -876,7 +920,23 @@ nav {
   color: var(--white);
   background: transparent;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  margin: 0;
+
+  @media screen and (min-width: 768px) {
+    /* display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    cursor: auto;
+    font-size: 12px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--white);
+    color: var(--white);
+    background: transparent;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);*/
+  }
+
+  @media screen and (min-width: 1158px) {
+  }
 }
 
 .email-form-group-input::placeholder {
