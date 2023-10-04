@@ -229,6 +229,9 @@ nav {
 .mobile-nav-menu-item:not(:first-child) {
   margin-top: 40px;
 }
+.mobile-nav-menu-item.active {
+  color: var(--ocean);
+}
 
 /*mobile*/
 .section {
@@ -876,18 +879,25 @@ nav {
 }
 .portfolio-features-list-item {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
-  flex-wrap: wrap;
+
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     column-gap: 24px;
-    row-gap: 48px;
+    row-gap: 72px;
   }
 
-  @media screen and (min-width: 1158px) {
+  @media screen and (max-width: 1158px) {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 23px;
+    row-gap: 48px;
   }
 }
 
