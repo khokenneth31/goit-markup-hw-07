@@ -49,6 +49,7 @@ address {
 .container {
   max-width: 428px;
   margin: auto;
+  padding: 0 16px;
 
   @media screen and (max-width: 768px) {
     max-width: 768px;
@@ -115,6 +116,7 @@ body {
 .header {
   border-bottom: 1px solid var(--cornflower);
   background: var(--white);
+  padding: 10px 0;
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
@@ -149,9 +151,18 @@ nav {
   cursor: pointer;
   border: 0;
   background: transparent;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1158px) {
+    display: none;
+  }
 }
 .mobile-nav-button svg {
   fill: var(--navyblue);
+  width: 32px;
+  height: 22px;
 }
 
 .mobile-nav {
@@ -172,6 +183,14 @@ nav {
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1158px) {
+    display: none;
+  }
 }
 .mobile-nav.is-open {
   pointer-events: auto;
@@ -186,6 +205,13 @@ nav {
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1158px) {
+    display: none;
+  }
 }
 .mobile-nav-menu {
   padding: 48px 40px;
@@ -303,7 +329,6 @@ nav {
   background: var(--ocean);
 }
 .features-list-item {
-  background: var(--cloud);
   display: inline-flex;
   flex-direction: column;
   width: 264px;
@@ -360,10 +385,10 @@ nav {
 .feature-list-title {
   font-size: 36px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 40px;
   letter-spacing: 0.4px;
   color: var(--navyblue);
-  padding: 8px 0;
+  margin-bottom: 10px;
   @media screen and (min-width: 768px) {
     font-weight: 700;
     font-size: 36px;
@@ -548,6 +573,7 @@ nav {
 .team-title {
   color: var(--navyblue);
   text-align: center;
+  margin-bottom: 72px;
 
   /* Header 2 */
   font-size: 36px;
@@ -636,7 +662,6 @@ nav {
   line-height: 48px; /* 120% */
   letter-spacing: 0.72px;
   text-transform: capitalize;
-  margin-bottom: 72px;
 }
 
 .iris-logo {
@@ -687,8 +712,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 72px;
-  margin-bottom: 72px;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -798,6 +821,7 @@ nav {
 
 .filter-buttons-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
 }
@@ -980,6 +1004,8 @@ nav {
   align-items: center;
   color: var(--white);
   background: var(--iris);
+  max-width: 160px;
+  margin: 0 auto;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1032,8 +1058,8 @@ nav {
   padding: 72px 24px 24px 24px;
   top: 50%;
   left: 50%;
-  /*width: 408px;
-  height: 584px;*/
+  width: 85%;
+  /*height: 584px;*/
   border-radius: 4px;
   background: var(--dairy);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -1113,9 +1139,9 @@ nav {
   border: 1px solid var(--lightslate);
   border-radius: 4px;
   margin-top: 4px;
-  width: 360px;
   padding-bottom: 11px;
   padding-top: 11px;
+  min-width: 85%;
 }
 .user-contact input {
   padding-left: 34px;
@@ -1161,6 +1187,7 @@ nav {
   border-radius: 4px;
   background-color: var(--iris);
   color: var(--white);
+  min-width: 169px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition-property: background-color, color;
@@ -1186,7 +1213,6 @@ label.user-contact-checkbox {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 360px;
   height: 16px;
   gap: 8px;
   margin-bottom: 24px;
@@ -1233,159 +1259,28 @@ label.user-contact-checkbox {
 }
 /* modal window form*/
 /*mobile*/
-.menu-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-left: auto;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  outline: none;
-  color: var(--navyblue, #2e2f42);
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
-.hamburger-close-button {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-
-  background-color: var(--cornflower, #e7e9fc);
-  color: var(--navyblue, #2e2f42);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  cursor: pointer;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu-icon {
-  fill: currentColor;
-}
-
-.hamburger-close-button:hover,
-.hamburger-close-button:focus {
-  background-color: var(--ocean);
-  color: var(--white);
-}
-
-.hamburger-menu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.hamburger-menu-item {
-  color: var(--navyblue, #2e2f42);
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 0.72px;
-}
-
-.hamburger-menu-link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hamburger-menu-link:hover,
-.hamburger-menu-link:focus {
-  color: var(--ocean);
-}
-
-.hamburger-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-}
-
-.hamburger-address {
-  color: var(--slate, #434455);
+.mobile-address {
+  color: var(--slate);
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.4px;
 }
-
-.hamburger-address-list {
+.mobile-nav-info {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-
-.hamburger-address-link {
-  color: inherit;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hamburger-address-link:hover,
-.hamburger-address-link:focus {
-  color: var(--ocean);
-}
-
-.highlight {
-  color: var(--iris, #4d5ae5);
+.mobile-nav-info-item {
+  color: var(--iris);
   font-size: 30px;
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 0.72px;
 }
-
-.hamburger-social-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.hamburger-social-link {
-  background-color: var(--iris, #4d5ae5);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--cloud, #f4f4fd);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hamburger-social-link:hover,
-.hamburger-social-link:focus {
-  background-color: var(--ocean, #404bbf);
-}
-
-.hamburger-social-icon {
-  fill: currentColor;
-}
-
-.menu-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 48px 40px;
-  background-color: var(--white);
-  z-index: 200;
-
-  transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu-container.is-open {
-  transform: translateX(0);
+.mobile-address-link {
+  color: inherit;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*mobile*/
