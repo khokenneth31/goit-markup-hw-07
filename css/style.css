@@ -219,17 +219,18 @@ nav {
 .mobile-nav-close svg {
   fill: var(--navyblue);
 }
-
+.mobile-nav-menu-item-link {
+  color: var(--navyblue);
+}
 .mobile-nav-menu-item a {
   font-size: 36px;
   letter-spacing: 0.72px;
   text-transform: capitalize;
-  color: var(--navyblue);
 }
 .mobile-nav-menu-item:not(:first-child) {
   margin-top: 40px;
 }
-.mobile-nav-menu-item.active {
+.mobile-nav-menu-item-link.active {
   color: var(--ocean);
 }
 
@@ -971,10 +972,6 @@ nav {
 .nav-list-item-link:focus {
   color: var(--iris);
 }
-.nav-list-item-link:active {
-  color: var(--ocean);
-}
-
 .email-form-group-input {
   display: flex;
   flex-direction: column;
