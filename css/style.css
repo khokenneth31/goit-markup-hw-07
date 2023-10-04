@@ -879,6 +879,16 @@ nav {
   column-gap: 24px;
   row-gap: 48px;
   flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+  }
+
+  @media screen and (min-width: 1158px) {
+  }
 }
 
 .portfolio-features-list {
