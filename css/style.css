@@ -234,6 +234,28 @@ nav {
   color: var(--ocean);
 }
 
+.mobile-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 24px;
+  justify-content: center;
+}
+.mobile-nav-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: var(--iris);
+  border-radius: 100px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-nav-link-container {
+  display: flex;
+  flex-direction: row;
+}
 /*mobile*/
 .section {
   padding: 100px 0;
