@@ -514,6 +514,7 @@ nav {
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .team-list-item {
+  cursor: pointer;
   border-radius: 0px 0px 4px 4px;
   background: var(--white);
   padding-bottom: 32px;
@@ -521,8 +522,7 @@ nav {
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
-.team-link:hover,
-.team-list-item:hover {
+.team-link:hover {
   cursor: pointer;
   background-color: var(--ocean);
 }
