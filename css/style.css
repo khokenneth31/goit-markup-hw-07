@@ -394,7 +394,7 @@ ul.mobile-nav-links {
   text-align: center;
   justify-content: center;
 
-  @media screen and (width: 768px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -403,8 +403,8 @@ ul.mobile-nav-links {
     column-gap: 24px;
     row-gap: 72px;
   }
-  @media screen and (width: 1158px) {
-    display: block;
+  @media screen and (min-width: 1158px) {
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     text-align: left;
