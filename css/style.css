@@ -331,7 +331,7 @@ ul.mobile-nav-links {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(/img/thero.jpg);
+      url(../img/thero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
