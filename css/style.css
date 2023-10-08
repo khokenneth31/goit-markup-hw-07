@@ -794,7 +794,7 @@ ul.mobile-nav-links {
   justify-content: center;
   column-gap: 0;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
