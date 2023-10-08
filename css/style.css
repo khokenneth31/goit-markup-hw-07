@@ -303,7 +303,7 @@ ul.mobile-nav-links {
     font-size: 56px;
     line-height: 60px;
     letter-spacing: 1.12px;
-    margin: 0 136px;
+    margin: 0 125px;
     margin-bottom: 36px;
   }
 
@@ -1139,6 +1139,13 @@ nav {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transform: translate(-50%, -50%);
+  @media screen and (min-width: 768px) {
+    width: 45%;
+  }
+
+  @media screen and (min-width: 1158px) {
+    width: 30%;
+  }
 }
 .modal-close {
   position: absolute;
