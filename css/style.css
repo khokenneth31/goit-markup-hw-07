@@ -326,7 +326,7 @@ ul.mobile-nav-links {
     font-size: 56px;
     line-height: 60px;
     letter-spacing: 1.12px;
-    margin: 0 125px;
+    margin: 0 120px;
     margin-bottom: 36px;
   }
 
@@ -1238,11 +1238,7 @@ nav {
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transform: translate(-50%, -50%);
   @media screen and (min-width: 768px) {
-    width: 45%;
-  }
-
-  @media screen and (min-width: 1158px) {
-    width: 30%;
+    width: 408px;
   }
 }
 .modal-close {
@@ -1321,6 +1317,9 @@ nav {
   padding-bottom: 11px;
   padding-top: 11px;
   min-width: 85%;
+  @media screen and (min-width: 768px) {
+    width: 360px;
+  }
 }
 .user-contact input {
   padding-left: 34px;
