@@ -1318,7 +1318,7 @@ nav {
   padding-top: 11px;
   min-width: 85%;
   @media screen and (min-width: 768px) {
-    width: 360px;
+    width: 370px;
   }
 }
 .user-contact input {
